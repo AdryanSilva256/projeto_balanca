@@ -3,34 +3,52 @@
 
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gerador de Senha</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<div class="painel">
+<div class="container">
 
-<h1>🔐 GERADOR DE SENHA</h1>
+<h1>🔐 Gerador de Senha</h1>
 
 <div class="info">
-<p id="data"></p>
-<p id="hora"></p>
+
+<div class="box">
+📅 <span id="data"></span>
 </div>
 
-<button class="btn" onclick="calcular()">CALCULAR SENHA</button>
+<div class="box">
+⏰ <span id="hora"></span>
+</div>
 
-<div class="senha" id="resultado"></div>
+</div>
 
-<button class="btn-sec" onclick="mostrarCampo()">CALCULAR OUTRA DATA</button>
+<button class="btn btn-verde" onclick="calcularSenha()">
+GERAR SENHA
+</button>
 
-<div id="outraData" class="areaData">
+<div class="senha" id="senha"></div>
+
+<hr>
+
+<button class="btn btn-azul" onclick="mostrarOutraData()">
+CALCULAR OUTRA DATA
+</button>
+
+<div class="area-data" id="areaData">
 
 <input type="date" id="dataEscolhida">
 
-<button class="btn" onclick="calcularOutra()">CALCULAR</button>
+<button class="btn btn-verde" onclick="calcularOutraData()">
+CALCULAR
+</button>
 
-<div class="senha2" id="resultadoOutra"></div>
+<div class="senha2" id="senhaOutra"></div>
 
 </div>
 

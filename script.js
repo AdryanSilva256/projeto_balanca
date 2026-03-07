@@ -1,70 +1,84 @@
-function atualizarDataHora(){
+function atualizarRelogio(){
 
 let agora = new Date()
 
-let dia = String(agora.getDate()).padStart(2,'0')
-let mes = String(agora.getMonth()+1).padStart(2,'0')
+let dia = String(agora.getDate()).padStart(2,"0")
+let mes = String(agora.getMonth()+1).padStart(2,"0")
 let ano = agora.getFullYear()
 
-let hora = String(agora.getHours()).padStart(2,'0')
-let minuto = String(agora.getMinutes()).padStart(2,'0')
-let segundo = String(agora.getSeconds()).padStart(2,'0')
+let hora = String(agora.getHours()).padStart(2,"0")
+let minuto = String(agora.getMinutes()).padStart(2,"0")
+let segundo = String(agora.getSeconds()).padStart(2,"0")
 
-document.getElementById("data").innerText = "Data: " + dia + "/" + mes + "/" + ano
-document.getElementById("hora").innerText = "Hora: " + hora + ":" + minuto + ":" + segundo
+document.getElementById("data").innerText =
+dia + "/" + mes + "/" + ano
+
+document.getElementById("hora").innerText =
+hora + ":" + minuto + ":" + segundo
 
 }
 
-atualizarDataHora()
-setInterval(atualizarDataHora,1000)
+setInterval(atualizarRelogio,1000)
+
+atualizarRelogio()
 
 
 
-function calcular(){
+function calcularSenha(){
 
 let agora = new Date()
 
 let dia = agora.getDate()
+
 let mes = agora.getMonth()+1
 
 let senha = (dia + 20) + "" + (mes + 11)
 
-document.getElementById("resultado").innerText = senha
+document.getElementById("senha").innerText = senha
 
 }
 
 
 
-function mostrarCampo(){
+function mostrarOutraData(){
 
-let area = document.getElementById("outraData")
+let area = document.getElementById("areaData")
 
 if(area.style.display === "block"){
+
 area.style.display = "none"
+
 }else{
+
 area.style.display = "block"
-}
 
 }
 
+}
 
 
-function calcularOutra(){
+
+function calcularOutraData(){
 
 let valor = document.getElementById("dataEscolhida").value
 
 if(valor === ""){
+
 alert("Selecione uma data")
+
 return
+
 }
 
 let partes = valor.split("-")
 
 let dia = parseInt(partes[2])
+
 let mes = parseInt(partes[1])
 
 let senha = (dia + 20) + "" + (mes + 11)
 
-document.getElementById("resultadoOutra").innerText = senha
+document.getElementById("senhaOutra").innerText = senha
 
 }
+
