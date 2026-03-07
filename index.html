@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<title>Gerador de Senha</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="painel">
+
+<h1>🔐 GERADOR DE SENHA</h1>
+
+<div class="info">
+<p id="data"></p>
+<p id="hora"></p>
+</div>
+
+<button class="btn" onclick="calcular()">CALCULAR SENHA</button>
+
+<div class="senha" id="resultado"></div>
+
+<button class="btn-sec" onclick="mostrarCampo()">CALCULAR OUTRA DATA</button>
+
+<div id="outraData" class="areaData">
+
+<input type="date" id="dataEscolhida">
+
+<button class="btn" onclick="calcularOutra()">CALCULAR</button>
+
+<div class="senha2" id="resultadoOutra"></div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
