@@ -119,7 +119,7 @@ box-sizing:border-box;
 
 }
 
-/* mostrar texto no celular */
+/* mostra texto no celular */
 
 input[type="date"]::-webkit-datetime-edit{
 color:#111;
