@@ -22,8 +22,6 @@ setInterval(atualizarRelogio,1000)
 
 atualizarRelogio()
 
-
-
 function calcularSenha(){
 
 let agora = new Date()
@@ -37,8 +35,6 @@ let senha = (dia + 20) + "" + (mes + 11)
 document.getElementById("senha").innerText = senha
 
 }
-
-
 
 function mostrarOutraData(){
 
@@ -55,8 +51,6 @@ area.style.display = "block"
 }
 
 }
-
-
 
 function calcularOutraData(){
 
@@ -81,4 +75,3 @@ let senha = (dia + 20) + "" + (mes + 11)
 document.getElementById("senhaOutra").innerText = senha
 
 }
-
