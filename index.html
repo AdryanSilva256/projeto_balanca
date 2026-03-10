@@ -2,59 +2,58 @@
 <html lang="pt-br">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gerador de Senha</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="container">
+        <h1>🔐 Gerador de Senha</h1>
+        <div class="versao">
+            Versão - 0.1.0
+        </div>
+        <div class="info">
+            <div class="box">
+                📅 <span id="data"></span>
+            </div>
+            <div class="box">
+                ⏰ <span id="hora"></span>
+            </div>
 
-<div class="container">
+        </div>
 
-<h1>🔐 Gerador de Senha</h1>
+        <button class="btn btn-verde" onclick="calcularSenha()">
+            GERAR SENHA
+        </button>
 
-<div class="info">
+        <div class="senha" id="senha"></div>
 
-<div class="box">
-📅 <span id="data"></span>
-</div>
+        <hr>
 
-<div class="box">
-⏰ <span id="hora"></span>
-</div>
+        <button class="btn btn-azul" onclick="mostrarOutraData()">
+            CALCULAR OUTRA DATA
+        </button>
 
-</div>
+        <div class="area-data" id="areaData">
 
-<button class="btn btn-verde" onclick="calcularSenha()">
-GERAR SENHA
-</button>
+            <input type="date" id="dataEscolhida">
 
-<div class="senha" id="senha"></div>
+            <button class="btn btn-verde" onclick="calcularOutraData()">
+                CALCULAR
+            </button>
 
-<hr>
+            <div class="senha2" id="senhaOutra"></div>
 
-<button class="btn btn-azul" onclick="mostrarOutraData()">
-CALCULAR OUTRA DATA
-</button>
+        </div>
 
-<div class="area-data" id="areaData">
-
-<input type="date" id="dataEscolhida">
-
-<button class="btn btn-verde" onclick="calcularOutraData()">
-CALCULAR
-</button>
-
-<div class="senha2" id="senhaOutra"></div>
-
-</div>
-
-</div>
-
-<script src="script.js"></script>
+    </div>
+    <footer class="rodape">
+        <p>Copyright © 2026 Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

@@ -12,40 +12,37 @@ let segundo = String(agora.getSeconds()).padStart(2,"0")
 
 document.getElementById("data").innerText =
 dia + "/" + mes + "/" + ano
-
 document.getElementById("hora").innerText =
 hora + ":" + minuto + ":" + segundo
 
 }
 
 setInterval(atualizarRelogio,1000)
-
 atualizarRelogio()
 
 function calcularSenha(){
 
+let campo = document.getElementById("senha")
+
+if(campo.innerText !== ""){
+campo.innerText = ""
+return
+}
+
 let agora = new Date()
-
 let dia = agora.getDate()
-
 let mes = agora.getMonth()+1
-
 let senha = (dia + 20) + "" + (mes + 11)
 
-document.getElementById("senha").innerText = senha
+campo.innerText = senha
 
 }
 
 function mostrarOutraData(){
-
 let area = document.getElementById("areaData")
-
 if(area.style.display === "block"){
-
 area.style.display = "none"
-
 }else{
-
 area.style.display = "block"
 
 }
@@ -53,25 +50,17 @@ area.style.display = "block"
 }
 
 function calcularOutraData(){
-
 let valor = document.getElementById("dataEscolhida").value
-
 if(valor === ""){
-
 alert("Selecione uma data")
-
 return
 
 }
 
 let partes = valor.split("-")
-
 let dia = parseInt(partes[2])
-
 let mes = parseInt(partes[1])
-
 let senha = (dia + 20) + "" + (mes + 11)
-
 document.getElementById("senhaOutra").innerText = senha
 
 }
