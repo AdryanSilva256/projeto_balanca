@@ -1,6 +1,6 @@
 function atualizarRelogio(){
 
-let agora = new Date()
+let agora = new Date() 
 
 let dia = String(agora.getDate()).padStart(2,"0")
 let mes = String(agora.getMonth()+1).padStart(2,"0")
