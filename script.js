@@ -64,3 +64,21 @@ let senha = (dia + 20) + "" + (mes + 11)
 document.getElementById("senhaOutra").innerText = senha
 
 }
+
+function fazerLogin(){
+
+    let user = document.getElementById("usuario").value
+    let senha = document.getElementById("senhaLogin").value
+    let erro = document.getElementById("erroLogin")
+
+    // LOGIN FIXO (você pode mudar depois)
+    if(user === "loja" && senha === "loja"){
+
+        document.getElementById("loginTela").style.display = "none"
+        document.getElementById("sistema").style.display = "block"
+
+    }else{
+        erro.innerText = "Usuário ou senha incorretos"
+    }
+
+}
