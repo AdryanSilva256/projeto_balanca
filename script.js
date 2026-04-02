@@ -64,19 +64,31 @@ let senha = (dia + 20) + "" + (mes + 11)
 document.getElementById("senhaOutra").innerText = senha
 
 }
-
 function fazerLogin(){
 
     let user = document.getElementById("usuario").value
     let senha = document.getElementById("senhaLogin").value
     let erro = document.getElementById("erroLogin")
 
-    // LOGIN FIXO (você pode mudar depois)
-    if(user === "loja" && senha === "loja"){
+    let usuarios = [
+        { user: "Loja", senha: "2026" },
+        { user: "Admin", senha: "admin" },
+        { user: "admin", senha: "admin" },
+        { user: "Adryan", senha: "2026" }
+    ]
 
+    let acessoLiberado = false
+
+    for(let i = 0; i < usuarios.length; i++){
+        if(user === usuarios[i].user && senha === usuarios[i].senha){
+            acessoLiberado = true
+            break
+        }
+    }
+
+    if(acessoLiberado){
         document.getElementById("loginTela").style.display = "none"
-        document.getElementById("sistema").style.display = "block"
-
+        document.getElementById("sistema").style.display = "flex"
     }else{
         erro.innerText = "Usuário ou senha incorretos"
     }

@@ -13,24 +13,33 @@
 <!-- 🔐 LOGIN (APARECE PRIMEIRO) -->
 <div id="loginTela" class="login-container">
 
-    <h1>🔐 Acesso</h1>
+    <div class="card-login">
 
-    <div class="box">
-        <input type="text" id="usuario" placeholder="Usuário">
+        <h1>🔐 Acesso</h1>
+        <p class="subtitulo">Gerador de Senha</p>
+                <div class="versao">
+            Versão - 0.2.0
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="usuario" placeholder=" ">
+            <label>Usuário</label>
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="senhaLogin" placeholder=" ">
+            <label>Senha</label>
+        </div>
+
+        <button class="btn btn-verde" onclick="fazerLogin()">
+            ENTRAR
+        </button>
+
+        <div id="erroLogin" class="erro"></div>
+
     </div>
-
-    <div class="box">
-        <input type="password" id="senhaLogin" placeholder="Senha">
-    </div>
-
-    <button class="btn btn-verde" onclick="fazerLogin()">
-        ENTRAR
-    </button>
-
-    <div id="erroLogin" class="erro"></div>
 
 </div>
-
 
 <!-- 🛠️ SISTEMA (COMEÇA ESCONDIDO) -->
 <div id="sistema" style="display:none;">
@@ -39,7 +48,7 @@
         <h1>🔐 Gerador de Senha</h1>
 
         <div class="versao">
-            Versão - 0.1.0
+            Versão - 0.2.0
         </div>
 
         <div class="info">
