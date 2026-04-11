@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Senha</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons8-balança-48.png" type="image/x-icon">
 </head>
 
 <body>
 
-<!-- 🔐 LOGIN (APARECE PRIMEIRO) -->
+<!-- 🔐 LOGIN -->
 <div id="loginTela" class="login-container">
 
     <div class="card-login">
 
         <h1>🔐 Acesso</h1>
         <p class="subtitulo">Gerador de Senha</p>
-                <div class="versao">
-            Versão - 0.2.0
+
+        <div class="versao">
+            Versão - 0.3.0
         </div>
 
         <div class="input-group">
@@ -26,10 +28,18 @@
             <label>Digite seu Usuário</label>
         </div>
 
-        <div class="input-group">
-            <input type="password" id="senhaLogin" placeholder=" ">
-            <label>Digite sua Senha</label>
-        </div>
+        <div class="input-group" style="position: relative;">
+    <input type="password" id="senhaLogin" placeholder=" " style="padding-right: 40px;">
+    <label>Digite sua Senha</label>
+
+    <span onclick="toggleSenhaLogin()"
+        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+
+        <!-- COMEÇA COM OLHO FECHADO -->
+        <img id="iconeSenha" src="visivel.png" width="20">
+
+    </span>
+</div>
 
         <button class="btn btn-verde" onclick="fazerLogin()">
             ENTRAR
@@ -41,14 +51,14 @@
 
 </div>
 
-<!-- 🛠️ SISTEMA (COMEÇA ESCONDIDO) -->
+<!-- 🛠️ SISTEMA -->
 <div id="sistema" style="display:none;">
 
     <div class="container">
         <h1>🔐 Gerador de Senha</h1>
 
         <div class="versao">
-            Versão - 0.2.0
+            Versão - 0.3.0
         </div>
 
         <div class="info">

@@ -94,3 +94,15 @@ function fazerLogin(){
     }
 
 }
+  function toggleSenhaLogin() {
+    let campo = document.getElementById("senhaLogin");
+    let icone = document.getElementById("iconeSenha");
+
+    if (campo.type === "password") {
+        campo.type = "text";
+        icone.src = "olho.png"; //  aberto (mostrando senha)
+    } else {
+        campo.type = "password";
+        icone.src = "visivel.png"; //  com risco (escondendo senha)
+    }
+}
