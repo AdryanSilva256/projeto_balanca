@@ -1,3 +1,3 @@
 # projeto_balanca
 
-# projeto oriato a uso interno da intituicao autorizada!!!
+Projeto orientado a uso interno da intituicao autorizada!!!
