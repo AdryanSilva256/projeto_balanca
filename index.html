@@ -11,8 +11,12 @@
 
 <body>
 
-<!-- 🔐 LOGIN -->
-<div id="loginTela" class="login-container">
+<!-- ===================================================== -->
+<!-- 🔐 LOGIN DESATIVADO TEMPORARIAMENTE                   -->
+<!-- Para ativar novamente, remova: style="display:none;" -->
+<!-- ===================================================== -->
+
+<div id="loginTela" class="login-container" style="display:none;">
 
     <div class="card-login">
 
@@ -29,17 +33,33 @@
         </div>
 
         <div class="input-group" style="position: relative;">
-    <input type="password" id="senhaLogin" placeholder=" " style="padding-right: 40px;">
-    <label>Digite sua Senha</label>
 
-    <span onclick="toggleSenhaLogin()"
-        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+            <input 
+                type="password" 
+                id="senhaLogin" 
+                placeholder=" " 
+                style="padding-right: 40px;"
+            >
 
-        <!-- COMEÇA COM OLHO FECHADO -->
-        <img id="iconeSenha" src="visivel.png" width="20">
+            <label>Digite sua Senha</label>
 
-    </span>
-</div>
+            <span 
+                onclick="toggleSenhaLogin()"
+                style="
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                "
+            >
+
+                <!-- COMEÇA COM OLHO FECHADO -->
+                <img id="iconeSenha" src="visivel.png" width="20">
+
+            </span>
+
+        </div>
 
         <button class="btn btn-verde" onclick="fazerLogin()">
             ENTRAR
@@ -51,10 +71,16 @@
 
 </div>
 
-<!-- 🛠️ SISTEMA -->
-<div id="sistema" style="display:none;">
+
+<!-- ===================================================== -->
+<!-- 🛠️ SISTEMA                                            -->
+<!-- Abre diretamente porque o login está desativado       -->
+<!-- ===================================================== -->
+
+<div id="sistema" style="display:flex;">
 
     <div class="container">
+
         <h1>🔐 Gerador de Senha</h1>
 
         <div class="versao">
@@ -62,6 +88,7 @@
         </div>
 
         <div class="info">
+
             <div class="box">
                 📅 <span id="data"></span>
             </div>
@@ -69,6 +96,7 @@
             <div class="box">
                 ⏰ <span id="hora"></span>
             </div>
+
         </div>
 
         <button class="btn btn-verde" onclick="calcularSenha()">
@@ -102,6 +130,7 @@
     </footer>
 
 </div>
+
 
 <script src="script.js"></script>
 
